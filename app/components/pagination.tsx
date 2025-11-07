@@ -21,7 +21,7 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
     const showMax = 5;
     
     let start = Math.max(1, currentPage - 2);
-    const end = Math.min(totalPages, start + showMax - 1);
+    let end = Math.min(totalPages, start + showMax - 1);
     
     if (end - start < showMax - 1) {
       start = Math.max(1, end - showMax + 1);
@@ -49,7 +49,7 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
           <Link
             key={page}
             href={`/?page=${page}`}
-            className={`px-4 py-2 rounded-md transition-colors ${
+            className={`px-4 py-2 text-amber-800 rounded-md transition-colors ${
               page === currentPage
                 ? 'bg-blue-500 text-white'
                 : 'bg-white border border-gray-300 hover:bg-gray-50'
