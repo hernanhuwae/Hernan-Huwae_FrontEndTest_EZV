@@ -31,7 +31,7 @@ export default function TodoList({ initialData, page }: TodoListProps) {
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       {isFetching && !isLoading && (
         <div className="bg-blue-50 px-4 py-2 text-sm text-blue-700">
-          🔄 Refreshing data...
+          Refreshing data...
         </div>
       )}
 
@@ -43,7 +43,7 @@ export default function TodoList({ initialData, page }: TodoListProps) {
 
       {isError && (
         <div className="bg-red-50 px-4 py-2 text-sm text-red-700">
-          ⚠️ Error loading todos. Showing cached data.
+          Error loading todos. Showing cached data.
         </div>
       )}
       
